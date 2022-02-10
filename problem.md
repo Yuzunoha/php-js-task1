@@ -17,3 +17,21 @@
 - 確認画面で OK を選択したらレコード削除の POST を実行する。
 
 - 確認画面を OK せずに閉じたら何もしない。
+
+## ヒント
+
+- PHP でこの課題で有効な PDO オブジェクトを生成するコード
+
+  ```PHP
+  $pdo = new PDO('mysql:host=db;dbname=bbs', 'root', 'root');
+  ```
+
+- JS で Submit を行うコード
+
+  ```JS
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.innerHTML = '<input name="inputタグの名前" value="inputタグの値">';
+  document.body.append(form);
+  form.submit();
+  ```
