@@ -48,6 +48,10 @@
 
 - 削除ボタンを押すと、当該レコードを削除してよいか確認画面を出す(JS の confirm 関数でよい)。
 
+  - ![image](https://user-images.githubusercontent.com/22877094/153441202-75a3b0de-3cef-491b-9f5e-1e2e61123eda.png)
+
+  - 削除確認画面には当該レコードの id と text を表示すること。
+
 - 確認画面で OK を選択したらレコード削除の POST を実行する。
 
 - 確認画面を OK せずに閉じたら何もしない。
