@@ -21,16 +21,19 @@ function getMessages()
     return $ret;
 }
 
-function main()
+function deleteMessage($id)
 {
-    p('$_SERVER[REQUEST_METHOD]');
-    p($_SERVER["REQUEST_METHOD"]);
-    if ('POST' === $_SERVER["REQUEST_METHOD"]) {
-        print_r($_POST);
-    }
+    $pdo = getPdo();
+    $sql = 'delete from messages where id = :id';
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    return $stmt->execute();
 }
 
-main();
+if ('POST' === $_SERVER["REQUEST_METHOD"]) {
+    deleteMessage($_POST['id']);
+}
+
 ?>
 
 <html>
