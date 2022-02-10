@@ -54,7 +54,9 @@
 
 - 確認画面で OK を選択したらレコード削除の POST を実行する。
 
-- 確認画面を OK せずに閉じたら何もしない。
+  - ![image](https://user-images.githubusercontent.com/22877094/153441681-76a30743-b206-4e15-b3cd-7f8c245ee91b.png)
+
+  - 確認画面を OK せずに閉じたら何もしない。
 
 ## ヒント
 
