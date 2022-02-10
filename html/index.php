@@ -23,13 +23,14 @@ function getMessages()
 
 function main()
 {
-    p('<pre>');
-    $ret = getMessages();
-    foreach ($ret as $o) {
-        print_r($o);
-        p();
+    p('$_SERVER[REQUEST_METHOD]');
+    p($_SERVER["REQUEST_METHOD"]);
+    if ('POST' === $_SERVER["REQUEST_METHOD"]) {
+        print_r($_POST);
     }
 }
+
+main();
 ?>
 
 <html>
@@ -53,7 +54,7 @@ function main()
             const ret = confirm('削除～' + id);
             if (ret) {
                 const form = document.createElement('form');
-                form.method = 'DELETE';
+                form.method = 'POST';
                 form.innerHTML = '<input name="id" value="' + id + '">';
                 document.body.append(form);
                 form.submit();
