@@ -48,6 +48,8 @@
 
 ## 詳細
 
+- DB から取得した値をブラウザで表示する際には htmlspecialchars を使うこと。
+
 - テーブルの全てのレコードをブラウザに表示し、レコードの各列に削除ボタンを表示する。
 
   - ![image](https://user-images.githubusercontent.com/22877094/153440960-6a562899-518b-4b05-99a1-1fb54bfffd9c.png)

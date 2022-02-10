@@ -30,6 +30,11 @@ function deleteMessage($id)
     return $stmt->execute();
 }
 
+function h($a)
+{
+    return htmlspecialchars($a);
+}
+
 if ('POST' === $_SERVER["REQUEST_METHOD"]) {
     deleteMessage($_POST['id']);
 }
@@ -44,8 +49,8 @@ if ('POST' === $_SERVER["REQUEST_METHOD"]) {
         <?php
         $ret = getMessages();
         foreach ($ret as $o) {
-            $id = $o['id'];
-            $text = $o['text'];
+            $id = h($o['id']);
+            $text = h($o['text']);
             echo '<tr>';
             echo '<td>' . $text . '</td>';
             echo '<td><button onclick="onclickDelete(' . $id . ', \'' . $text . '\')">削除</button></td>';
