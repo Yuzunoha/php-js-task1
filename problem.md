@@ -8,6 +8,14 @@
 
 - データベースとテーブルとレコードは、Docker の初回起動時に自動で作成されます。
 
+  - この課題で使うテーブルの定義
+    ```SQL
+    CREATE TABLE `messages` (
+      `id` int PRIMARY KEY AUTO_INCREMENT,
+      `text` text NOT NULL
+    );
+    ```
+
 - Docker コンテナを初回起動するコマンド※
 
   ```
