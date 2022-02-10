@@ -50,7 +50,14 @@ function main()
     </table>
     <script>
         const onclickDelete = (id) => {
-            alert('削除～' + id);
+            const ret = confirm('削除～' + id);
+            if (ret) {
+                const form = document.createElement('form');
+                form.method = 'DELETE';
+                form.innerHTML = '<input name="id" value="' + id + '">';
+                document.body.append(form);
+                form.submit();
+            }
         }
     </script>
 </body>
