@@ -28,7 +28,7 @@
 
 - ※make コマンドは Makefile があるディレクトリで実行してください。make コマンドで行っている処理の中身は Makefile の中身を確認してください。
 
-- ブラウザでのアクセス
+- ブラウザからのアクセス
 
   - localhost
 
@@ -37,8 +37,6 @@
   - localhost:8888
 
     - phpMyAdmin に繋がります。
-
-- Docker コンテナの起動中にブラウザで localhost にアクセスすると index.php が実行されます。
 
 ## 詳細
 
