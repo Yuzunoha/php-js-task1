@@ -28,11 +28,23 @@
 
 - ※make コマンドは Makefile があるディレクトリで実行してください。make コマンドで行っている処理の中身は Makefile の中身を確認してください。
 
+- ブラウザでのアクセス
+
+  - localhost
+
+    - index.php が実行されます。
+
+  - localhost:8888
+
+    - phpMyAdmin に繋がります。
+
 - Docker コンテナの起動中にブラウザで localhost にアクセスすると index.php が実行されます。
 
 ## 詳細
 
 - テーブルの全てのレコードをブラウザに表示し、レコードの各列に削除ボタンを表示する。
+
+  - ![image](https://user-images.githubusercontent.com/22877094/153440960-6a562899-518b-4b05-99a1-1fb54bfffd9c.png)
 
 - 削除ボタンを押すと、当該レコードを削除してよいか確認画面を出す(JS の confirm 関数でよい)。
 
