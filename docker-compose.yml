@@ -5,10 +5,11 @@ services:
       context: ./docker/app
     volumes:
       - ./html:/var/www/html
-    ports:
-      - 80:80
     environment:
       TZ: Asia/Tokyo
+      VIRTUAL_HOST: phpjs1.yuzunoha.net
+      LETSENCRYPT_HOST: phpjs1.yuzunoha.net
+      LETSENCRYPT_EMAIL: studysteadystandby@gmail.com
   db:
     build:
       context: ./docker/db
@@ -19,14 +20,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=bbs
       - TZ=Asia/Tokyo
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=db
-      - PMA_USER=root
-      - PMA_PASSWORD=root
-    ports:
-      - 8888:80
-    volumes:
-      - ./docker/phpmyadmin/sessions:/sessions
+networks:
+  default:
+    external:
+      name: nginx-proxy
