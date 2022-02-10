@@ -26,6 +26,8 @@
   make down
   ```
 
+- Docker コンテナの起動中にブラウザで localhost にアクセスすると index.php が実行されます。
+
 - ※make コマンドは Makefile があるディレクトリで実行してください。make コマンドで行っている処理の中身は Makefile の中身を確認してください。
 
 ## 詳細
@@ -46,7 +48,7 @@
   $pdo = new PDO('mysql:host=db;dbname=bbs', 'root', 'root');
   ```
 
-- JS で Submit を行うコード
+- JS で localhost に POST するコード
 
   ```JS
   const form = document.createElement('form');
