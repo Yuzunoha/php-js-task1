@@ -45,16 +45,21 @@ if ('POST' === $_SERVER["REQUEST_METHOD"]) {
         $ret = getMessages();
         foreach ($ret as $o) {
             $id = $o['id'];
+            $text = $o['text'];
             echo '<tr>';
-            echo '<td>' . $o['text'] . '</td>';
-            echo '<td><button onclick="onclickDelete(' . $id . ')">削除</button></td>';
+            echo '<td>' . $text . '</td>';
+            echo '<td><button onclick="onclickDelete(' . $id . ', \'' . $text . '\')">削除</button></td>';
             echo '</tr>';
         }
         ?>
     </table>
     <script>
-        const onclickDelete = (id) => {
-            const ret = confirm('削除～' + id);
+        const onclickDelete = (id, text) => {
+            let s = '次のメッセージを削除しますか。\n';
+            s += 'id: ' + id + '\n';
+            s += 'text: ' + text + '\n';
+
+            const ret = confirm(s);
             if (ret) {
                 const form = document.createElement('form');
                 form.method = 'POST';
